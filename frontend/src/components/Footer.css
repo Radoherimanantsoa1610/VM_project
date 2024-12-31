@@ -1,0 +1,19 @@
+.App-footer {
+    background-color: #282c34; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    padding: 20px; /* Espacement interne */
+    position: relative; /* Pour un positionnement futur */
+    bottom: 0; /* Pour fixer le footer en bas de la page */
+    width: 100%; /* S'étendre sur toute la largeur */
+}
+
+.footer-link {
+    color: #61dafb; /* Couleur du lien */
+    margin: 0 15px; /* Espacement autour des liens */
+    text-decoration: none; /* Pas de soulignement */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}

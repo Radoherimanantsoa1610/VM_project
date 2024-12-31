@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Page d'accueil{% endblock %}
+
+{% block content %}
+    <h1>Bienvenue sur le Système de Billetterie de l'Événement</h1>
+    <p>Choisissez une action :</p>
+    <ul>
+        <li><a href="{% url 'ticket_form' %}">Acheter un ticket</a></li>
+        <li><a href="{% url 'client_form' %}">Créer un compte client</a></li>
+    </ul>
+{% endblock %}

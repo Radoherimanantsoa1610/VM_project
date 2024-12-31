@@ -1,0 +1,60 @@
+/* App.css */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+form {
+  display: inline-block;
+  text-align: left;
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  width: 250px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Responsive design pour les petits écrans */
+@media screen and (max-width: 600px) {
+  .App {
+    margin-top: 20px;
+  }
+
+  input {
+    width: 100%;  /* Les champs de saisie prennent toute la largeur */
+    margin-bottom: 15px;
+  }
+
+  button {
+    width: 100%;  /* Le bouton prend toute la largeur sur mobile */
+  }
+}

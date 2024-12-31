@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Événement - Système de Billetterie{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Accueil</a></li>
+                <li><a href="{% url 'ticket_form' %}">Acheter un ticket</a></li>
+                <li><a href="{% url 'client_form' %}">Créer un compte client</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Contenu spécifique à chaque page -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Système de Billetterie Événement</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{% extends 'gestion_client/base.html' %}
+
+{% block title %}Détails du client{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Détails du client</h1>
+
+        <div class="card">
+            <div class="card-header">
+                Informations du client
+            </div>
+            <div class="card-body">
+                <p><strong>Nom :</strong> {{ client.nom }}</p>
+                <p><strong>Email :</strong> {{ client.email }}</p>
+                <p><strong>Numéro de téléphone :</strong> {{ client.numero_telephone }}</p>
+                <p><strong>Solde :</strong> €{{ client.solde }}</p>
+
+                <div class="form-group">
+                    <label for="qr_code">QR Code :</label>
+                    {% if client.qr_code %}
+                        <img src="{{ client.qr_code.url }}" alt="QR Code" class="img-thumbnail" width="150">
+                    {% else %}
+                        <p>Aucun QR code généré pour ce client.</p>
+                    {% endif %}
+                </div>
+
+                <hr>
+                <a href="{% url 'client_form' client.id %}" class="btn btn-primary">Modifier les informations</a>
+            </div>
+        </div>
+
+        <hr>
+        <a href="{% url 'index' %}" class="btn btn-secondary">Retour à l'accueil</a>
+    </div>
+{% endblock %}

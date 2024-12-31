@@ -1,0 +1,16 @@
+.App-header {
+    background-color: #282c34; /* Couleur de fond du header */
+    color: white; /* Couleur du texte */
+    padding: 20px; /* Espacement interne */
+    text-align: center; /* Centrer le texte */
+}
+
+nav a {
+    color: #61dafb; /* Couleur des liens */
+    margin: 0 15px; /* Espacement autour des liens */
+    text-decoration: none; /* Pas de soulignement */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Soulignement au survol des liens */
+}

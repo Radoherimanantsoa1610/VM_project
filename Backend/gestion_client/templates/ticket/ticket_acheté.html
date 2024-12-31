@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Ticket Achete{% endblock %}
+
+{% block content %}
+    <h1>Merci pour votre achat !</h1>
+    <p>Votre ticket a été acheté avec succès.</p>
+    <p>Voici votre QR Code pour l'événement :</p>
+    <img src="{{ qr_code_url }}" alt="QR Code du ticket">
+{% endblock %}
