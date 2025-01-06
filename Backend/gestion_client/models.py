@@ -1,5 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
 # Modèle étendu pour User avec des rôles
 class User(AbstractUser):
@@ -83,3 +86,9 @@ class Boutique(models.Model):
 
     def __str__(self):
         return self.nom
+
+class ProtectedView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        return Response({"message": "Vous êtes authentifié"})

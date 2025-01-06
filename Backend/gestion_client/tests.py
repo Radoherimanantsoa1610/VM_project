@@ -2,12 +2,14 @@ from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth import get_user_model
 from .models import Client, Ticket
+from django.conf import settings
 
 class ClientTestCase(TestCase):
 
     def setUp(self):
         # Créer un utilisateur de test
         self.user = get_user_model().objects.create_user(username='testuser', password='12345')
+        settings.SECRET_KEY = 'admin_test'
 
         # Créer un client de test
         self.client_test = Client.objects.create(nom="Test", prenom="User", telephone="1234567890", qr_code="QR1234")

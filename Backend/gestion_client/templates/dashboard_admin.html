@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+    <!-- Inclure le fichier CSS -->
+    <link rel="stylesheet" href="{% static 'frontend/build/static/css/main.bfe2e628.chunk.css' %}">
+
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur le Dashboard Admin</h1>
+    </header>
+
+    <main>
+        <section class="overview">
+            <h2>Vue d'ensemble</h2>
+            <div class="stats">
+                <div class="stat">
+                    <h3>Total des Clients</h3>
+                    <p>{{ total_clients }}</p>
+                </div>
+                <div class="stat">
+                    <h3>Total des Tickets</h3>
+                    <p>{{ total_tickets }}</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-transactions">
+            <h2>Dernières Transactions</h2>
+            {% if recent_transactions %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Client</th>
+                            <th>Montant</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for transaction in recent_transactions %}
+                            <tr>
+                                <td>{{ transaction.date }}</td>
+                                <td>{{ transaction.client.nom }} {{ transaction.client.prenom }}</td>
+                                <td>{{ transaction.montant }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p>Aucune transaction récente.</p>
+            {% endif %}
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Gestion de l'Événement. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

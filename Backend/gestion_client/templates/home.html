@@ -1,0 +1,92 @@
+
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Système de gestion des tickets pour un événement. Achetez vos tickets et gérez vos transactions en toute simplicité.">
+    <meta name="keywords" content="événement, tickets, gestion, système, achat, transactions">
+    <title>Page d'Accueil - Ticket System</title>
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}">
+</head>
+
+<body>
+
+    <!-- En-tête -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/ticket/acheter/">Acheter un Ticket</a></li>
+                <li><a href="/dashboard/">Dashboard Admin</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Bienvenue sur le Système de Gestion des Tickets</h1>
+    </header>
+
+    <!-- Section Hero (Carrousel ou Bannière) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Réservez vos tickets pour l'événement maintenant !</h2>
+            <p>Ne manquez pas l'opportunité de participer à l'événement de l'année. Achetez vos tickets et gérez vos transactions en toute simplicité.</p>
+            <a href="/ticket/acheter/" class="cta-button">Acheter un Ticket</a>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section class="about">
+        <div class="about-content">
+            <h2>À propos de notre plateforme</h2>
+            <p>Notre plateforme vous permet d'acheter des tickets pour des événements en ligne. Vous pouvez facilement consulter votre historique, vérifier votre solde et gérer vos transactions de manière sécurisée.</p>
+            <ul>
+                <li><strong>Facilité d'utilisation :</strong> Interface simple et intuitive.</li>
+                <li><strong>Sécurité :</strong> Vos informations sont protégées.</li>
+                <li><strong>Transactions rapides :</strong> Paiement et validation des tickets en un clic.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section Fonctionnalités -->
+    <section class="features">
+        <div class="feature-item">
+            <h3>Gestion des Tickets</h3>
+            <p>Achetez vos tickets en ligne et gérez vos réservations directement sur notre plateforme.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Historique des Transactions</h3>
+            <p>Consultez facilement toutes vos transactions passées et suivez votre solde en temps réel.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Support Client</h3>
+            <p>Besoin d'aide ? Notre équipe est disponible pour répondre à toutes vos questions concernant l'achat et la gestion de vos tickets.</p>
+        </div>
+    </section>
+
+    <!-- Section Liens utiles -->
+    <section class="useful-links">
+        <h2>Liens Utiles</h2>
+        <ul>
+            <li><a href="/ticket/acheter/">Acheter un Ticket</a></li>
+            <li><a href="/client/historique/12345/">Mon Historique de Transactions</a></li>
+            <li><a href="/contact/">Contactez-nous</a></li>
+            <li><a href="/dashboard/">Accéder au Dashboard Admin</a></li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Ticket System. Tous droits réservés.</p>
+        <p><a href="/privacy-policy/">Politique de confidentialité</a> | <a href="/terms-of-service/">Conditions d'utilisation</a></p>
+    </footer>
+
+</body>
+
+</html>

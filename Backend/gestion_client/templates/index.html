@@ -6,7 +6,13 @@
     <h1>Bienvenue sur le Système de Billetterie de l'Événement</h1>
     <p>Choisissez une action :</p>
     <ul>
+        <!-- Lien pour acheter un ticket -->
         <li><a href="{% url 'ticket_form' %}">Acheter un ticket</a></li>
+
+        <!-- Lien pour créer un compte client -->
         <li><a href="{% url 'client_form' %}">Créer un compte client</a></li>
+
+        <!-- Lien pour retourner à la page d'accueil -->
+        <li><a href="{% url 'index' %}">Retour à la page d'accueil</a></li>
     </ul>
 {% endblock %}
